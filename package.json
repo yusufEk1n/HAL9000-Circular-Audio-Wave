@@ -1,0 +1,14 @@
+{
+  "name": "hal9000-circular_audio_wave",
+  "version": "1.0.0",
+  "description": "HAL9000 Circular Audio Wave using HTML5 Canvas and Web Audio API",
+  "author": {
+    "name": "Yusuf Ekin",
+    "email": "ekinn.yusuf56@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yusufEk1n/"
+  },
+  "license": "MIT"
+}
