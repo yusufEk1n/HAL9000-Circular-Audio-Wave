@@ -51,7 +51,6 @@ div::after {
 
 .lens::after {
     background-image: radial-gradient(#fff 2px, #fff300 8px, rgba(255, 0, 0, 0.9) 14px, rgba(255, 0, 0, 0.08) 35px, transparent 35px);
-    z-index: 100;
 }
 
 .reflections,
@@ -95,10 +94,19 @@ div::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
 }
 
 .text {
     margin-top: 2em;
     color: #79b4ba;
-  }
+}
+
+.animation {
+    background: radial-gradient(#79b4ba, #47696d, #890000);
+    mix-blend-mode: color-dodge;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
