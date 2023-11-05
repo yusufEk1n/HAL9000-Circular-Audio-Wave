@@ -1,0 +1,104 @@
+body {
+    background-color: white;
+    padding: 2em;
+    overflow: hidden;
+}
+
+div,
+canvas {
+    border-radius: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+div::before,
+div::after {
+    border-radius: inherit;
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.lens {
+    background-image: radial-gradient(#b10000 12%, #120619 67%, #200517);
+    border: 8px solid #0b020d;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 2.5px #120619;
+    -moz-box-shadow: 0 0 5px 2.5px #120619;
+    -webkit-box-shadow: 0 0 5px 2.5px #120619;
+    -o-box-shadow: 0 0 5px 2.5px #120619;
+    width: 213px;
+    height: 213px;
+}
+
+.lens::before {
+    background-image: radial-gradient(#f00 20%, #470010 50%, #1a193e 80%);
+    mix-blend-mode: soft-light;
+    opacity: 0.8;
+}
+
+.lens::after {
+    background-image: radial-gradient(#fff 2px, #fff300 8px, rgba(255, 0, 0, 0.9) 14px, rgba(255, 0, 0, 0.08) 35px, transparent 35px);
+    z-index: 100;
+}
+
+.reflections,
+.reflections::before,
+.reflections::after {
+    background-image: radial-gradient(transparent 19%, #ec32aa 23%, #d4f6fc 28%, #ec32aa 33%, transparent 36%, transparent 38%, #e558d0 40%, #d0fcfe 45%, #ce73df 50%, transparent 52%, transparent 56%, #b883e7 60%, #b7ffff 65%, #3564c7 72%, transparent);
+    background-size: 182px 182px;
+    background-position: top center;
+    border-radius: 15px 15px 5px 5px/5px 5px 15px 15px;
+    filter: blur(4px);
+    position: absolute;
+    top: 26px;
+    width: 58px;
+    height: 75px;
+}
+
+.reflections {
+    left: 69px;
+    transform: perspective(30px) rotate3d(1, 0, 0, -15deg);
+    transform-origin: top;
+}
+
+.reflections::before,
+.reflections::after {
+    height: 45px;
+    top: 28px;
+}
+
+.reflections::before {
+    left: -65px;
+    transform: rotate(-43deg);
+}
+
+.reflections::after {
+    right: -65px;
+    transform: rotate(43deg);
+}
+
+#audioWaveCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.text {
+    margin-top: 2em;
+    color: #79b4ba;
+  }
